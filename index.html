@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="status" id="status"></h1>
+    <div class="content">
+        <div class="content-wrapper" id="cWrapper">
+            <form onsubmit="onSubmit(event)">
+                <h1 id="heading">Please Login</h1>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="" id="email">
+                </div>
+                <div>
+                    <label for="pass">Password:</label>
+                    <input type="password" name="" id="pass" minlength="5">
+                </div>
+                <button class="btn-submit" type="submit" id="submit">Login</button>
+            </form>
+        </div>
+        <span class="color-background" id="colorBg"></span>
+        <div class="login-signup-wrapper" id="toggleStateWrapper">
+            <h1>OR</h1>
+            <p id="toggleStateParagraph">If you don't have account, please <span onclick="onChangeState()">Sign Up</span></p>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

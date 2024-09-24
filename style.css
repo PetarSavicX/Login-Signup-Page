@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #303030;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 70vh;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.content-wrapper,
+.login-signup-wrapper {
+    opacity: 1;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.login-signup-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.login-signup-wrapper p {
+    font-size: 20px;
+}
+
+.login-signup-wrapper p span {
+    text-wrap: nowrap;
+    text-decoration: underline;
+    user-select: none;
+    cursor: pointer;
+}
+
+.content-wrapper form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.content-wrapper div {
+    width: 100%;
+}
+
+.content-wrapper form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.content-wrapper form input {
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 3px solid #5a5a5a;
+    color: black;
+    padding: 5px;
+    transition: 200ms;
+    -webkit-transition: 200ms;
+    font-size: 1rem;
+}
+
+.content-wrapper form input:focus {
+    border: 3px solid purple !important;
+    outline: none;
+}
+
+.btn-submit {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 200ms;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    border-color: purple;
+    background-color: purple;
+}
+
+.color-background {
+    top: 20%;
+    position: absolute;
+    width: 150%;
+    height: 120%;
+    background-color: purple;
+    z-index: -1;
+    transition: all 700ms ease-in-out;
+}
+
+.color-background-right {
+    right: -10%;
+    transform: translate(30%) rotateZ(-70deg);
+}
+
+.color-background-left {
+    left: -10%;
+    transform: translate(-30%) rotateZ(70deg);
+}
+.status{
+    text-wrap: nowrap;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+}
+@keyframes disapear {
+    from{
+        opacity: 1;
+        margin-top: 0;
+    }
+    to{
+        opacity: 0;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1{
+        font-size: 24px;
+    }
+    .color-background-right{
+        right: -20%;
+    }
+    .color-background-left{
+        left: -20%;
+    }
+    .login-signup-wrapper p{
+        font-size: 16px;
+    }
+    .login-signup-wrapper{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .color-background-right{
+        right: -25%;
+        transform: translate(30%) rotateZ(-80deg);
+    }
+    .color-background-left{
+        left: -25%;
+        transform: translate(-30%) rotateZ(80deg);
+
+    }
+}
+
+@media screen and (max-width:769px) {
+    .status{
+        top: 0;
+    }
+    .content{
+        height: 90vh;
+    }
+    .content-wrapper,
+    .login-signup-wrapper {
+        opacity: 1;
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content-wrapper form{
+        gap: 20px;
+    }
+    .left{
+        left: 0;
+        top: 0;
+    }
+    .right{
+        right: 0;
+        bottom: 0;
+    }
+    .color-background {
+        top: 0;
+        left: -30%;
+        position: absolute;
+        width: 200%;
+        height: 70%;
+        background-color: purple;
+        z-index: -1;
+        transition: all 500ms ease-in-out;
+    }
+    
+    .color-background-right {
+        top: 50% !important;
+        transform: translate(0,0) rotateZ(-10deg);
+    }
+    
+    .color-background-left {
+        top: 0%;
+        transform: translate(0,-30%) rotateZ(10deg);
+    }
+    @keyframes disapear {
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width:481px) {
+    .content{
+        width: 90vw;
+    }
+}
